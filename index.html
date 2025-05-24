@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daniel Lichy</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            max-width: 1200px;
+        }
+        /* Header */
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        /* Clearfix */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* About Section */
+        .about {
+            background: #eaeaea;
+            color: #333;
+            padding: 30px 0;
+        }
+        .about .about-container {
+            display: flex;
+            align-items: center;
+        }
+        .about img {
+            border-radius: 50%;
+            margin-right: 20px;
+            width: 200px;
+            height: auto;
+            flex-shrink: 0;
+        }
+        .about h1 {
+            margin-top: 0;
+        }
+        /* Publications Section */
+        .publications {
+            background: #ffffff;
+            color: #333;
+            padding: 30px 0;
+        }
+        .publications h2 {
+            color: #35424a;
+            text-align: center;
+        }
+        .publications article {
+            display: flex;
+            align-items: flex-start;
+            padding: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .pub-media {
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        .pub-media img,
+        .pub-media video {
+            max-width: 300px;
+            height: auto;
+            display: block;
+        }
+        .pub-content {
+            flex: 1;
+        }
+        .pub-content h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .pub-content p {
+            margin: 0 0 10px;
+        }
+        .pub-content a {
+            display: inline-block;
+            background-color: #e8491d;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 3px;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .pub-content a:hover {
+            background-color: #c73717;
+        }
+        /* Footer */
+        footer {
+            padding: 20px;
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .about .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about img {
+                margin: 0 auto 20px;
+            }
+            header nav {
+                float: none;
+                text-align: center;
+                margin-top: 20px;
+            }
+            header li {
+                float: none;
+                display: block;
+                padding: 10px 0;
+            }
+            .publications article {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .pub-media {
+                margin: 0 0 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="clearfix">
+        <div class="container">
+            <div id="branding">
+                <h1>Daniel Lichy</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#">Home</a></li>
+                    <li><a href="mailto:dlichy@umd.edu">Email</a></li>
+                    <li><a href="https://scholar.google.com/citations?hl=en&amp;user=gYUbHrEAAAAJ">Google Scholar</a></li>
+                    <li><a href="https://twitter.com/daniel_lichy">Twitter</a></li>
+                    <li><a href="https://github.com/dlichy">Github</a></li>
+                    <li><a href="Lichy_Resume.pdf">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="about">
+        <div class="container about-container">
+            <img src="images/lichy_image.jpg" alt="Your Photo">
+            <div class="about-text">
+                <h1>About Me</h1>
+                <p>
+                    I am a Senior R&D Engineer on the Computer Vision team at 
+                    <a href="https://www.kitware.com/">Kitware</a>. I completed my PhD in Computer Science in 2024 at the 
+                    University of Maryland, where I was advised by 
+                    <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a> and mentored by 
+                    <a href="https://www.cs.unc.edu/~ronisen/">Roni Sengupta</a>. 
+                    My research focused on geometry and material reconstruction from images. During my PhD, 
+                    I also had the pleasure of interning with 
+                    <a href="https://oraziogallo.github.io/">Orazio Gallo</a> in the 
+                    Learning and Perception Research Group at NVIDIA.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="publications">
+        <div class="container">
+            <h2>Publications</h2>
+
+            <article>
+                <div class="pub-media">
+                    <video autoplay loop muted playsinline>
+                        <source src="images/nvTorchCamVideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="pub-content">
+                    <h3>nvTorchCam: An Open-source Library for Camera-Agnostic Differentiable Geometric Vision</h3>
+                    <p><strong>Daniel Lichy</strong>, Hang Su, Abhishek Badki, Jan Kautz, Orazio Gallo<br>arXiv 2024</p>
+                    <a href="https://arxiv.org/abs/2410.12074">Paper</a>
+                    <a href="https://github.com/NVlabs/nvTorchCam">Code</a>
+                </div>
+            </article>
+
+            <article>
+                <div class="pub-media">
+                    <img src="images/fov_agnostic.png" alt="Field-of-View Agnostic Depth Estimation for Cross-Dataset Generalization">
+                </div>
+                <div class="pub-content">
+                    <h3>Field-of-View Agnostic Depth Estimation for Cross-Dataset Generalization</h3>
+                    <p><strong>Daniel Lichy</strong>, Hang Su, Abhishek Badki, Jan Kautz, Orazio Gallo<br>International Conference on 3D Vision 2024 (Oral)</p>
+                    <a href="https://arxiv.org/abs/2401.13786">Paper</a>
+                    <a href="https://research.nvidia.com/labs/lpr/fova-depth/">Project Page</a>
+                    <a href="https://github.com/NVlabs/fova-depth">Code</a>
+                </div>
+            </article>            
+            
+            <article>
+                <div class="pub-media">
+                    <img src="images/mvpsnet.png" alt="MVPSNet: Fast Generalizable Multi-view Photometric Stereo">
+                </div>
+                <div class="pub-content">
+                    <h3>MVPSNet: Fast Generalizable Multi-view Photometric Stereo</h3>
+                    <p>Dongxu Zhao, <strong>Daniel Lichy</strong>, Pierre-Nicolas Perrin, Jan-Michael Frahm, Roni Sengupta<br>ICCV 2023</p>
+                    <a href="https://arxiv.org/abs/2305.11167">Paper</a>
+                    <a href="https://floralzhao.github.io/mvpsnet.github.io/">Project Page</a>
+                    <a href="https://github.com/FloralZhao/MVPSNet">Code</a>
+                </div>
+            </article>
+            
+            <article>
+                <div class="pub-media">
+                    <img src="images/fastNFPS/teaser_v3.jpg" alt="Fast Light-Weight Near-Field Photometric Stereo">
+                </div>
+                <div class="pub-content">
+                    <h3>Fast Light-Weight Near-Field Photometric Stereo</h3>
+                    <p><strong>Daniel Lichy</strong>, Roni Sengupta, David Jacobs<br>CVPR 2022</p>
+                    <a href="https://arxiv.org/abs/2203.16515">Paper</a>
+                    <a href="https://dlichy.github.io/fastNFPS.github.io/">Project Page</a>
+                    <a href="https://github.com/dlichy/FastNFPSCode">Code</a>
+                </div>
+            </article>
+    
+            <article>
+                <div class="pub-media">
+                    <img src="images/shape_mat/teaser2.png" alt="Shape and Material Capture at Home">
+                </div>
+                <div class="pub-content">
+                    <h3>Shape and Material Capture at Home</h3>
+                    <p><strong>Daniel Lichy</strong>, Jiaye Wu, Roni Sengupta, David Jacobs<br>CVPR 2021</p>
+                    <a href="https://arxiv.org/abs/2104.06397">Paper</a>
+                    <a href="https://dlichy.github.io/ShapeAndMaterialAtHome/">Project Page</a>
+                    <a href="https://github.com/dlichy/ShapeAndMaterial">Code</a>
+                </div>
+            </article>
+    
+            <article>
+                <div class="pub-media">
+                    <img src="images/sfs_mesh/Teaser.jpg" alt="SfSNet: Learning Shape, Reflectance and Illuminance of Faces in the Wild">
+                </div>
+                <div class="pub-content">
+                    <h3>SfSNet: Learning Shape, Reflectance and Illuminance of Faces in the Wild</h3>
+                    <p>Roni Sengupta, <strong>Daniel Lichy</strong>, Angjoo Kanazawa, Carlos D. Castillo, David Jacobs<br>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2020</p>
+                    <a href="https://ieeexplore.ieee.org/document/9305733/">Paper</a>
+                </div>
+            </article>
+    
+        </div>
+    </div>
+    
+    <footer>
+        <p>Daniel Lichy © 2025. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
